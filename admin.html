@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <div class="section">
+      <h3>List of Kids</h3>
+      <ul id="studentList"></ul>
+    </div>
+
+    <div class="section">
+      <h3>Register kids</h3>
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="text" id="motherName" placeholder="Mother's Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="motherPhone" placeholder="Mother's Phone Number" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <input type="date" id="dob" placeholder="Date of Birth" required>
+      <input type="text" id="allergies" placeholder="Any Allergies" required>
+      <button onclick="addStudent()">Add Student</button>
+      <p>Remove by clicking the remove button next to the name in the list above.</p>
+    </div>
+
+    <div class="section">
+      <h3>Daily Attendance</h3>
+      <div id="attendanceCheckboxes"></div>
+      <button onclick="markAttendance()">Mark Attendance</button>
+    </div>
+
+    <div class="section">
+      <h3>Monthly Payments</h3>
+      <select id="paymentStudentSelect" onchange="loadStudentPayments()">
+        <option value="">Select Student</option>
+      </select>
+      <div id="studentPayments"></div>
+      <button onclick="recordStudentPayments()">Record Payment</button>
+    </div>
+
+    <div class="section">
+      <h3>View Payment Records</h3>
+      <select id="viewStudentSelect" onchange="viewStudentPayments()">
+        <option value="">Select Student</option>
+      </select>
+      <ul id="viewPaymentsList"></ul>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>

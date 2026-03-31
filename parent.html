@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Parent Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Parent Portal</h1>
+
+    <div class="section">
+      <h3>Search for Your Child</h3>
+      <input type="text" id="childName" placeholder="Enter Child's Name">
+      <button onclick="searchChild()">Search</button>
+    </div>
+
+    <div class="section">
+      <h3>Child Attendance</h3>
+      <ul id="attendanceList"></ul>
+    </div>
+
+    <div class="section">
+      <h3>Monthly Payments</h3>
+      <ul id="monthlyPaymentList"></ul>
+    </div>
+
+    <p style="text-align: center; margin: 20px 0; font-size: 14px; color: #666;">for more info contact:0911667244 or 011 154 2295</p>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

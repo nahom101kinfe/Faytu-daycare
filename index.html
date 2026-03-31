@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Faytu Daycare - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Faytu Daycare</h1>
+    <h2>Welcome</h2>
+
+    <button onclick="showAdminLogin()">Admin Login</button>
+    <button onclick="goToParent()">Parent Portal</button>
+
+    <div id="adminLogin" style="display: none;">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="loginAdmin()">Login</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
