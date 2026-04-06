@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Faytu Daycare - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Faytu Daycare</h1>
+    <h2>Welcome</h2>
+
+    <button id="adminBtn">Admin Login</button>
+    <button id="parentBtn">Parent Portal</button>
+
+    <div id="adminLogin" style="display: none;">
+      <input type="password" id="password" placeholder="Password">
+      <button id="loginBtn">Login</button>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
+
+<script>
+async function loadStudents() {
+  const res = await fetch('/students');
+  const students = await res.json();
+
+  const list = document.getElementById('studentsList');
+  list.innerHTML = '';
+
+  students.forEach(s => {
+    const li = document.createElement('li');
+    li.textContent = s.name + " (Age: " + s.age + ")";
+    list.appendChild(li);
+  });
+}
+
+async function addStudent(name, age) {
+  await fetch('/students', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, age })
+  });
+
+  loadStudents();
+}
+
+// Load on page start
+loadStudents();
+</script>

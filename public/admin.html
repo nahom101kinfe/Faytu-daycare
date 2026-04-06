@@ -21,37 +21,37 @@
       <input type="text" id="address" placeholder="Address" required>
       <input type="date" id="dob" placeholder="Date of Birth" required>
       <input type="text" id="allergies" placeholder="Any Allergies" required>
-      <button onclick="addStudent()">Add Student</button>
+      <button id="addStudentBtn">Add Student</button>
       <p>Remove by clicking the remove button next to the name in the list above.</p>
     </div>
 
     <div class="section">
       <h3>Daily Attendance</h3>
       <div id="attendanceCheckboxes"></div>
-      <button onclick="markAttendance()">Mark Attendance</button>
+      <button id="markAttendanceBtn">Mark Attendance</button>
     </div>
 
     <div class="section">
       <h3>Monthly Payments</h3>
-      <select id="paymentStudentSelect" onchange="loadStudentPayments()">
+      <select id="paymentStudentSelect">
         <option value="">Select Student</option>
       </select>
       <div id="studentPayments"></div>
-      <button onclick="recordStudentPayments()">Record Payment</button>
+      <button id="recordPaymentBtn">Record Payment</button>
     </div>
 
     <div class="section">
       <h3>View Payment Records</h3>
-      <select id="viewStudentSelect" onchange="viewStudentPayments()">
+      <select id="viewStudentSelect">
         <option value="">Select Student</option>
       </select>
       <ul id="viewPaymentsList"></ul>
     </div>
 
-    <button class="logout-btn" onclick="logout()">Logout</button>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
   </div>
 
 
-  <script src="app.js"></script>
+  <script src="client.js"></script>
 </body>
 </html>
